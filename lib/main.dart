@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         title: 'Simple ToDo App',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primarySwatch: Colors.indigo,
+          primarySwatch: Colors.teal,
         ),
         home: const MyHomePage(),
       ),
