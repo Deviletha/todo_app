@@ -10,7 +10,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final _textFieldController = TextEditingController();
   String newTask = '';
-  //creating initState() for adding listener to controller
+
   @override
   void initState() {
     super.initState();
@@ -18,16 +18,16 @@ class _MyHomePageState extends State<MyHomePage> {
       newTask = _textFieldController.text;
     });
   }
-  //disposing the controller
+
   @override
   void dispose() {
     _textFieldController.dispose();
     super.dispose();
   }
   void _submit() {
-    //we aren't interested in updating our ui so listen will be false
+
     Provider.of<TodoProvider>(context, listen:    false).addTask(newTask);
-    //cancelling the dialog
+
     Navigator.pop(context);
     _textFieldController.clear();
   }

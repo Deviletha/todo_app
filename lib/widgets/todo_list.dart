@@ -11,11 +11,10 @@ class TodoAction extends StatelessWidget {
       itemCount: task.allTasks.length,
       itemBuilder: ((context, index) => ListTile(
         leading: Checkbox(
-          // toggle the task as index item
+
           value: task.allTasks[index].completed,
           onChanged: ((_) => task.toggleTask(task.allTasks[index])),
         ),
-        //show all the task title
         title: Text(task.allTasks[index].todoTitle),
         trailing: IconButton(
             onPressed: () {
